@@ -1,12 +1,13 @@
-module github.com/twpayne/go-geos
+module github.com/dohyeunglee/go-geos
 
-go 1.22
+go 1.23
 
 require (
 	github.com/alecthomas/assert/v2 v2.11.0
 	github.com/lib/pq v1.10.9
 	github.com/testcontainers/testcontainers-go v0.33.0
 	github.com/testcontainers/testcontainers-go/modules/postgres v0.33.0
+	github.com/twpayne/go-geos v0.18.1
 	gopkg.in/yaml.v3 v3.0.1
 )
 
