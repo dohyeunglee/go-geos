@@ -5,8 +5,8 @@ import (
 
 	"github.com/alecthomas/assert/v2"
 
-	"github.com/twpayne/go-geos"
-	"github.com/twpayne/go-geos/geometry"
+	"github.com/dohyeunglee/go-geos"
+	"github.com/dohyeunglee/go-geos/geometry"
 )
 
 func mustNewGeometryFromWKT(t *testing.T, wkt string) *geometry.Geometry {

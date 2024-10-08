@@ -1,6 +1,6 @@
 package geometry
 
-import geos "github.com/twpayne/go-geos"
+import "github.com/dohyeunglee/go-geos"
 
 // initialStringBufferSize is the initial size of strings.Buffers used for
 // building GeoJSON and KML representations.

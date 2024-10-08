@@ -6,9 +6,9 @@ import (
 
 	"github.com/alecthomas/assert/v2"
 
-	"github.com/twpayne/go-geos"
-	"github.com/twpayne/go-geos/geojson"
-	"github.com/twpayne/go-geos/geometry"
+	"github.com/dohyeunglee/go-geos"
+	"github.com/dohyeunglee/go-geos/geojson"
+	"github.com/dohyeunglee/go-geos/geometry"
 )
 
 func TestFeature(t *testing.T) {

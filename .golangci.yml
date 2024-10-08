@@ -113,9 +113,9 @@ linters-settings:
     sections:
     - standard
     - default
-    - prefix(github.com/twpayne/go-geos)
+    - prefix(github.com/dohyeunglee/go-geos)
   goimports:
-    local-prefixes: github.com/twpayne/go-geos
+    local-prefixes: github.com/dohyeunglee/go-geos
 
 issues:
   exclude-rules:

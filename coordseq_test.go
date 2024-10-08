@@ -8,7 +8,7 @@ import (
 
 	"github.com/alecthomas/assert/v2"
 
-	"github.com/twpayne/go-geos"
+	"github.com/dohyeunglee/go-geos"
 )
 
 func TestCoordSeqAliasing(t *testing.T) {

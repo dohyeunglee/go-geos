@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"database/sql/driver"
 
-	"github.com/twpayne/go-geos/geometry"
+	"github.com/dohyeunglee/go-geos/geometry"
 )
 
 var (

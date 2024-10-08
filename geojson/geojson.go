@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/twpayne/go-geos/geometry"
+	"github.com/dohyeunglee/go-geos/geometry"
 )
 
 const (

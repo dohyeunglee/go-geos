@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/twpayne/go-geos"
+	"github.com/dohyeunglee/go-geos"
 )
 
 // Scan implements database/sql.Scanner.

@@ -1,6 +1,6 @@
 package geometry
 
-import "github.com/twpayne/go-geos"
+import "github.com/dohyeunglee/go-geos"
 
 // NewGeometryFromWKT returns a new Geometry from wkt.
 func NewGeometryFromWKT(wkt string) (*Geometry, error) {

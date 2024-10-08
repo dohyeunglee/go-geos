@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/twpayne/go-geos"
+	"github.com/dohyeunglee/go-geos"
 )
 
 var (
