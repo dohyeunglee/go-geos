@@ -6,7 +6,7 @@ import (
 
 	"github.com/alecthomas/assert/v2"
 
-	"github.com/twpayne/go-geos"
+	"github.com/dohyeunglee/go-geos"
 )
 
 func mustNewGeomFromWKT(t *testing.T, c *geos.Context, wkt string) *geos.Geom {

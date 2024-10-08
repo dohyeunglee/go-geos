@@ -213,3 +213,21 @@ func (pg *PrepGeom) Within(g *Geom) bool {
 		panic(pg.parent.context.err)
 	}
 }
+
+// DistanceWithin returns if pg is within g.
+func (pg *PrepGeom) DistanceWithin(g *Geom, dist float64) bool {
+	pg.parent.context.Lock()
+	defer pg.parent.context.Unlock()
+	if g.context != pg.parent.context {
+		g.context.Lock()
+		defer g.context.Unlock()
+	}
+	switch C.GEOSPreparedDistanceWithin_r(pg.parent.context.handle, pg.pgeom, g.geom, C.double(dist)) {
+	case 0:
+		return false
+	case 1:
+		return true
+	default:
+		panic(pg.parent.context.err)
+	}
+}

@@ -6,7 +6,7 @@ import (
 
 	"github.com/alecthomas/assert/v2"
 
-	"github.com/twpayne/go-geos"
+	"github.com/dohyeunglee/go-geos"
 )
 
 func TestPrepGeom(t *testing.T) {
@@ -24,4 +24,13 @@ func TestPrepGeom(t *testing.T) {
 	assert.False(t, unitSquare.Overlaps(middleSquare))
 	assert.False(t, unitSquare.Touches(middleSquare))
 	assert.False(t, unitSquare.Within(middleSquare))
+}
+
+func TestPrepGeom_DistanceWithin(t *testing.T) {
+	defer runtime.GC() // Exercise finalizers.
+	c := geos.NewContext()
+	unitSquare := mustNewGeomFromWKT(t, c, "POLYGON ((0 0, 0 1, 1 1, 1 0, 0 0))").Prepare()
+	point := mustNewGeomFromWKT(t, c, "POINT (2 0)")
+	assert.True(t, unitSquare.DistanceWithin(point, 1))
+	assert.False(t, unitSquare.DistanceWithin(point, 0.25))
 }
