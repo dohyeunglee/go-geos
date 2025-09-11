@@ -85,6 +85,22 @@ func (g *Geom) CoordSeq() *CoordSeq {
 	return coordSeq
 }
 
+func (g *Geom) SetCoordXY(idx int, x float64, y float64) {
+	g.mustNotBeDestroyed()
+	g.context.Lock()
+	defer g.context.Unlock()
+	s := C.GEOSGeom_getCoordSeq_r(g.context.handle, g.geom)
+	if s == nil {
+		return
+	}
+	if C.GEOSCoordSeq_setX_r(g.context.handle, s, C.uint(idx), C.double(x)) == 0 {
+		panic(g.context.err)
+	}
+	if C.GEOSCoordSeq_setY_r(g.context.handle, s, C.uint(idx), C.double(y)) == 0 {
+		panic(g.context.err)
+	}
+}
+
 // ExteriorRing returns the exterior ring.
 func (g *Geom) ExteriorRing() *Geom {
 	g.mustNotBeDestroyed()
